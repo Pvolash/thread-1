@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thread Ex-1 </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /*****************************  navigation bar ****************************/
+.navbar{
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    background-color: transparent;
+}
+.logo a{
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+.logo a h1{
+    margin: 15px 50px 15px 100px;
+}
+.logo a h1 span{
+    color: #72837A;
+}
+.menu{
+    flex: 1;
+    text-align: left;
+    margin-top: 28px;
+}
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+    font-size: 15px;
+    transition: 0.5s;
+    font-weight: 500;
+    position: relative;
+}
+.menu ul li a:hover{
+    color: #72837A;
+}
+.menu ul li a span{
+    color: #72837A;
+}
+
+
+/* navbar mobile view */
+@media only screen and (max-width : 700px){
+    
+
+}
+            body {
+                background-color:#2D3142 ;
+            }
+            
+            h1, h2, h3 {
+                text-align: center;
+                color: #EF8354;
+            }
+            
+            p {
+                text-align: center;
+                color: #EF8354;
+                border: #4F5D75 solid 5px;
+                padding: 30px;
+                margin: 20px; 
+            }
+            .row {
+                display: flex;
+            }
+    
+            .left {
+                height: 80%;
+                
+                margin: 15px;
+                padding:20px;
+                
+            }
+            .right {
+                width: 50%;
+                margin: 15px;
+                padding:20px;
+                
+            }
+            ul {
+                list-style-type: none;
+                color:#EF8354
+            }
+
+/*Comment Section*/
+
+.wrapper {
+    padding: 20px;
+    background: #2D3142;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    width: 600px;
+    min-height: 400px;
+    margin: 20px 0;
+}
+
+.wrapper .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.wrapper .form .row .input-group {
+    padding: 0 10px;
+    display: block;
+}
+
+.wrapper .form .row .input-group:first-child {
+    padding-left: 0;
+}
+
+.wrapper .form .row .input-group:last-child {
+    padding-right: 0;
+}
+
+.wrapper .form .input-group {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+.wrapper .form .input-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.wrapper .form .input-group .btn {
+    margin: 20px 0;
+    display: block;
+    padding: .7rem 2rem;
+    opacity: .8;
+    color: #2D3142;
+    background: #EF8354;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .3s ease-in;
+}
+
+.wrapper .form .input-group .btn:hover {
+    opacity: 1;
+}
+
+.wrapper .form .input-group input, .wrapper .form .input-group textarea {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #EF8354;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.wrapper .form .input-group.textarea {
+    height: 200px;
+}
+
+.wrapper .form .input-group.textarea textarea {
+    resize: none;
+}
+
+.wrapper .prev-comments {
+    margin-top: 50px;
+}
+
+.wrapper .prev-comments .single-item {
+    background:#4F5D75;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.wrapper .prev-comments .single-item h4 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #111;
+}
+
+.wrapper .prev-comments .single-item a {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #111;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.wrapper .prev-comments .single-item p {
+    font-size: .9rem;
+    color: #111;
+}
+
+
+/*FOOTER*/
+footer *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: #72837A;
+    padding: 1%;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+}
+.footer-row {
+    display: flex;
+    margin: 0% 5%;
+}
+
+.footer-col {
+    padding: 10px;
+    margin-left: 20%;
+}
+
+.footer-col h4 {
+    font-size: 17px;
+    color: #171C1A;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.footer-col ul li {
+    list-style: none;
+    font-size: 14px;
+    color: #171C1A;
+    margin-bottom: 10px;
+}
+.footer-col ul li a {
+    color: #171C1A;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color:#6D6D60;
+    padding-left: 10px;
+}
+        </style>
+    </head>
+
+    <body>
+
+         <!--------------------------header--------------------------->
+
+    <div class="navbar" id="navbar">
+        <div class="logo">
+            <a href="index.html" id="logo"><h1><span>STAY WITH</span> SOLIDARITY</h1></a>
+        </div>
+        <div class="menu" id="menu">
+            <ul>
+                <li><a id="home" href="index.html">Home</a></li>
+                <li><a href="#explore">Forum</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a id="about" href="" target="blank">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+    
+
+        <h2> Graphic Designer Volunteer for METU Website </h2>
+        <h1> Graphic Designer- Volunteer </h1>
+        <hr>
+
+        <div class="row">
+        <div class="left">
+                <h3>Opportunity Details</h3>
+                <ul>
+                    <li>Ongoing</li>
+                    <li>Remote</li>
+                    <li>Recruting Now</li>
+                </ul>
+         </div>
+        <div class="right">
+
+            <h3> About this Opportunity </h3>
+        
+            <p>
+                AAA An opportunity for a talented Graphic designer specialized in visual identity with a strong interes in the nonprofit sector to join
+            a learning organization based in Turkey for ODTÜ. As a Graphic Designer, you will join a dynamic team and work in a key capacity to 
+            launch high-profile international projects. You will be responsible for creating professional elegant MS Office templates. Word and 
+            Power Point. Moreover, design logo and visual standards for banners
+            including social media.
+            </p>
+
+        </div>
+        </div>
+
+
+        <div class="wrapper">
+            <form action="" method="POST" class="form">
+                <div class="row">
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+                    </div>
+                </div>
+                <div class="input-group textarea">
+                    <label for="comment">Comment</label>
+                    <textarea id="comment" name="comment" placeholder="Enter your Comment" required></textarea>
+                </div>
+                <div class="input-group">
+                    <button name="submit" class="btn">Post Comment</button>
+                </div>
+            </form>
+            </div>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-row">
+                        <div class="footer-col">
+                            <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="">Forum</a></li>
+                            <li><a href="">About Us</a></li>
+                        </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Reach Us</h4>
+                            <ul>
+                                <li><i class="fas fa-phone-alt"></i> Phone Number: <a href="#">0538 090 7687</a></li>
+                                <li><i class="far fa-envelope"></i> Mail: <a href="mailto:staywithhelp@gmail.com">staywithhelp@gmail.com</a></li>
+                                <li><i class="far fa-map"></i> Address: <a href="https://www.google.com/maps?ll=39.901679,32.773842&z=12&t=m&hl=en&gl=TR&mapclient=embed&cid=9809087042985210984">Orta Doğu Teknik Üniversitesi <br> Üniversiteler Mahallesi Dumlupınar Bulvarı No:1 <br> 06800 Ankara/TÜRKİYE.</a></li>   
+                            </ul>
+                        </div>
+                    </div>
+                </div>   
+            </footer>
+    </body>
+</html>
